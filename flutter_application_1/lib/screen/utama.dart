@@ -57,7 +57,7 @@ class _BiodataListState extends State<BiodataList> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Daftar Mahasiswa'),
+        title: const Text('Mahasiswa UMDP'),
         actions: [
           IconButton(
             icon: const Icon(Icons.add),

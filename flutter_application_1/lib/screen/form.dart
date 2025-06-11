@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter_application_1/models/mahasiswa.dart';
 
-
 class BiodataForm extends StatefulWidget {
   final Mahasiswa? initialData;
 
@@ -17,7 +16,8 @@ class _BiodataFormState extends State<BiodataForm> {
   final _npmController = TextEditingController();
   final _namaController = TextEditingController();
   final _visiController = TextEditingController();
-  final DatabaseReference _database = FirebaseDatabase.instance.ref('mahasiswa');
+  final DatabaseReference _database =
+      FirebaseDatabase.instance.ref('mahasiswa');
   bool _isLoading = false;
 
   @override
@@ -75,8 +75,7 @@ class _BiodataFormState extends State<BiodataForm> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-            widget.initialData == null ? 'Tambah Mahasiswa' : 'Edit Mahasiswa'),
+        title: Text(widget.initialData == null ? 'Tambah Data' : 'Edit Data'),
         actions: [
           if (_isLoading)
             const Padding(
